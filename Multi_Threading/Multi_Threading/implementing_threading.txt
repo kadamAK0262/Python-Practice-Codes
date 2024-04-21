@@ -1,0 +1,74 @@
+1. Using the threading Module:
+The threading module is a built-in module in Python that provides a high-level interface 
+for working with threads.
+
+
+Thread modules
+It is started with Python 3, designated as obsolete, and can only be accessed with _thread that supports
+backward compatibility. To implement the thread module in Python, we need to import a thread module and 
+then define a function that performs some action by setting the target with a variable.
+
+Difference between "thread" and "threading" module :
+the thread module provides a basic interface for working with threads, while the threading 
+module offers higher-level abstractions and synchronization mechanisms for building concurrent 
+and parallel applications more easily. In most cases, it's recommended to use the threading module 
+for its richer feature set and better portability, unless you have specific requirements that 
+necessitate the use of the lower-level thread module.
+
+
+Level of Abstraction:
+
+thread: The thread module provides a lower-level interface for working with threads. 
+It exposes functions like start_new_thread() for creating and managing threads directly.
+    
+threading: The threading module provides a higher-level interface and more powerful 
+abstractions for working with threads. It includes classes like Thread, Lock, Semaphore, Event, etc., 
+which encapsulate common threading patterns and provide synchronization mechanisms.
+
+
+Synchronization:
+thread: The thread module lacks built-in synchronization mechanisms such as locks, semaphores, 
+and condition variables.
+
+threading: The threading module provides various synchronization primitives like Lock, RLock, 
+Semaphore, Event, and Condition for coordinating access to shared resources and managing thread execution.
+
+Exceptions:
+thread: The thread module doesn't provide built-in support for exception handling in threads. 
+Any exceptions raised in a thread need to be caught manually within the thread's target function.
+threading: The threading module allows exceptions raised in threads to propagate to the parent thread, 
+making it easier to handle and debug errors in multi-threaded programs.
+
+
+Portability:
+thread: The thread module is more low-level and platform-specific, and its behavior may vary across 
+different Python implementations (e.g., CPython, Jython, IronPython).
+
+threading: The threading module is more high-level and portable, 
+and its API is consistent across different Python implementations.
+
+
+Concurrency Models:
+thread: The thread module primarily supports threading based on the preemptive multitasking model, 
+where the operating system scheduler switches between threads.
+
+threading: The threading module supports both preemptive and cooperative multitasking models. 
+It also provides facilities for asynchronous programming with coroutines.
+
+
+
+3. Using the concurrent.futures Module:
+The concurrent.futures module provides a high-level interface for asynchronously 
+executing callables. It includes the ThreadPoolExecutor and ProcessPoolExecutor classes 
+for thread and process-based parallelism, respectively.
+
+
+4. Using the multiprocessing Module:
+Although primarily used for multiprocessing, the multiprocessing module also provides a Process 
+class that can be used to create and start new threads.
+
+
+5. Using the asyncio Module (for Asynchronous Programming):
+The asyncio module provides support for asynchronous programming in Python using coroutines. 
+It includes utilities for creating and managing concurrent tasks, including tasks that run in 
+separate threads.
