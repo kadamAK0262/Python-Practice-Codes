@@ -1,6 +1,6 @@
 # Python-Practice-Codes :
 
-🐍 Welcome to [Your Repository Name] 🐍
+🐍 Welcome to My Python codes Repository 🐍
 
 This repository is a culmination of my journey into the world of Python programming. Having embarked on this adventure with determination and curiosity, I've curated a collection of code snippets and projects that reflect my learning process and growing proficiency in Python.
 
