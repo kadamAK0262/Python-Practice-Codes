@@ -1,0 +1,55 @@
+Apache Spark is written in Scala programming language. To support Python with Spark, Apache Spark Community released a tool, PySpark.
+Using PySpark, you can work with RDDs in Python programming language also. It is because of a library called Py4j that 
+they are able to achieve this.
+
+PySpark offers PySpark Shell which links the Python API to the spark core and initializes the Spark context. 
+
+PySpark is the Python API for Apache Spark, which is an open-source, distributed computing system used for 
+big data processing and analytics. Spark provides an interface for programming entire clusters with implicit data 
+parallelism and fault tolerance.
+
+
+*****  Why Use PySpark? :
+
+1. Big Data Processing: PySpark is designed to handle large-scale data processing tasks efficiently. 
+It can process data in parallel across a distributed computing environment, making it suitable for big data analytics.
+
+2. Speed: Spark processes data much faster than traditional big data processing frameworks due to its in-memory processing capabilities.
+
+3. Ease of Use: PySpark provides a simple and expressive API in Python, which makes it easier for Python developers to use Spark.
+
+4. Versatility: PySpark supports various data processing tasks, including batch processing, interactive querying, real-time processing, 
+and machine learning.
+
+5. Integration with Hadoop: PySpark can run on Hadoop clusters and access Hadoop's HDFS for data storage.
+
+
+***** How PySpark Works ? :-
+
+1. Spark Context: The entry point to any Spark functionality is the SparkContext. It's the main gateway to all Spark 
+functionalities and is responsible for connecting to the Spark cluster.
+
+2. Resilient Distributed Dataset (RDD): Spark's core abstraction is the RDD, which is a fault-tolerant collection 
+of elements that can be operated on in parallel. RDDs can be created from Hadoop input formats or by transforming other RDDs.
+
+3. Transformations and Actions:
+
+Transformations: These are operations on RDDs that return a new RDD, such as map, filter, and reduceByKey. 
+Transformations are lazy, meaning they are not executed until an action is performed.
+Actions: These are operations that trigger the execution of transformations and return a result to the driver 
+program or write it to storage. Examples include collect, count, and saveAsTextFile.
+
+4. Lazy Evaluation: Spark uses lazy evaluation to optimize the execution plan. Transformations are not 
+executed immediately but are recorded to build a logical execution plan. When an action is performed, 
+Spark's scheduler optimizes and executes the plan.
+
+5. Cluster Manager: Spark applications run as independent sets of processes on a cluster, coordinated by the SparkContext. 
+The cluster manager (like YARN, Mesos, or Spark's standalone cluster manager) allocates resources for these processes.
+
+
+**********  Basic Workflow in PySpark *************
+Initialize SparkContext: Create a SparkContext object to connect to the cluster.
+Create RDDs: Load data into RDDs from various sources.
+Perform Transformations: Apply a series of transformations to RDDs to shape the data.
+Execute Actions: Trigger the execution of transformations by performing actions.
+Collect Results: Retrieve the results to the driver program or save them to storage.
